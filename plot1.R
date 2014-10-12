@@ -6,7 +6,7 @@ power_data <- read.table( "household_power_consumption.txt", sep = ";", header =
 
 power_data$Date <- as.Date( strptime( power_data$Date, format = "%d/%m/%Y" ) )
 
-two_days <- subset ( power_data, Date == "2007-02-01" | Date == "2007-02-02" )
+two_days <- subset( power_data, Date == "2007-02-01" | Date == "2007-02-02" )
 
 png( file = "plot1.png" )
 
