@@ -9,3 +9,5 @@ power_data$Date <- as.Date( strptime( power_data$Date, format = "%d/%m/%Y" ) )
 two_days <- subset ( power_data, Date == "2007-02-01" | Date == "2007-02-02" )
 
 hist( as.numeric( as.character( two_days$Global_active_power ) ), col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power" )
+
+png( file = "plot1.png" )
